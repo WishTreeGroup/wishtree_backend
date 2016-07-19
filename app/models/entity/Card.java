@@ -1,12 +1,13 @@
 package models.entity;
 
+import com.avaje.ebean.Model;
 import play.data.validation.Constraints;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-public class Card {
+public class Card extends Model{
 
     @Id
     private String id;
@@ -58,4 +59,6 @@ public class Card {
     public void setType(int type) {
         this.type = type;
     }
+
+    public static Finder<Long, Card> find = new Finder<Long,Card>(Card.class);
 }

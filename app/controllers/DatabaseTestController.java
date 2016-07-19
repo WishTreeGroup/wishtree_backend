@@ -24,6 +24,6 @@ public class DatabaseTestController extends Controller {
     @Transactional
     public Result hello() {
         String name = cardController.queryByName("name01");
-        return ok("Hello, world!" + name);
+        return ok("Hello, world!" + name + "get all: " + cardController.getAll());
     }
 }

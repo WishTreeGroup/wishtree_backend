@@ -27,4 +27,9 @@ public class CardController {
         List<String> nameList = resultList.stream().map(Card::getName).collect(Collectors.toList());
         return nameList.toString();
     }
+
+    public String getAll() {
+        List<Card> list = Card.find.all();
+        return list.get(0).getName();
+    }
 }
