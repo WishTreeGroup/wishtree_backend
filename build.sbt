@@ -11,3 +11,4 @@ libraryDependencies ++= Seq(
   cache,
   javaWs
 )
+libraryDependencies += "mysql" % "mysql-connector-java" % "6.0.3"
