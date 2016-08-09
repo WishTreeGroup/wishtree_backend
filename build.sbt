@@ -1,4 +1,4 @@
-name := "play-java"
+name := "WishTree"
 
 version := "1.0-SNAPSHOT"
 
@@ -9,8 +9,14 @@ scalaVersion := "2.11.7"
 libraryDependencies ++= Seq(
   javaJdbc,
   cache,
-  javaWs,
-  javaJpa,
-  "org.hibernate" % "hibernate-entitymanager" % "5.1.0.Final" // replace by your jpa implementation
+  javaWs
 )
-libraryDependencies += "mysql" % "mysql-connector-java" % "6.0.3"
+
+libraryDependencies += "mysql" % "mysql-connector-java" % "5.1.38"
+
+libraryDependencies ++= Seq(
+  javaJpa,
+  "org.hibernate" % "hibernate-entitymanager" % "5.1.0.Final"
+)
+
+PlayKeys.externalizeResources := false
