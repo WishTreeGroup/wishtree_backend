@@ -3,13 +3,16 @@ package models.entity;
 import play.data.validation.Constraints;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class Card {
 
     @Id
-    private String id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int id;
     @Constraints.Required
     @Constraints.MaxLength(20)
     private String name;
@@ -18,12 +21,13 @@ public class Card {
     @Constraints.MaxLength(100)
     private String thumbnail;
     private int type;
+    private int score;
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -57,5 +61,19 @@ public class Card {
 
     public void setType(int type) {
         this.type = type;
+    }
+
+    public int getScore() {
+        return score;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
+    }
+
+    @Override
+    public String toString() {
+        return "name:" + name + ", summary:" + summary + ", thumbnail:" + thumbnail + ", type:" + type + ", score:"
+                + score;
     }
 }
