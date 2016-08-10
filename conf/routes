@@ -21,3 +21,13 @@ GET     /card/                      controllers.CardController.getAllCards()
 GET     /card/:id                   controllers.CardController.getCardWithId(id: Integer)
 # update wish card
 PUT     /card/update                controllers.CardController.updateCard()
+
+# create person
+POST    /person/create              controllers.PersonController.createPerson()
+# delete person
+DELETE  /person/delete/:id          controllers.PersonController.deletePerson(id: Integer)
+# query person
+GET     /person/                    controllers.PersonController.getAllPersons()
+GET     /person/:id                 controllers.PersonController.getPersonWithId(id: Integer)
+# update person
+PUT     /person/update              controllers.PersonController.updatePerson()
