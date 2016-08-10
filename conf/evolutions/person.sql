@@ -1,9 +1,8 @@
-CREATE TABLE IF NOT EXISTS `card` (
+CREATE TABLE IF NOT EXISTS `person` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(20) NOT NULL,
-  `summary` varchar(100) DEFAULT NULL,
-  `thumbnail` varchar(100) DEFAULT NULL,
-  `type` int(11) DEFAULT '0',
-  `score` int(11) DEFAULT '0',
+  `account` varchar(50) NOT NULL,
+  `password` varchar(50) NOT NULL,
+  `level` int(11) NOT NULL DEFAULT '0',
+  `avatar` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 )
